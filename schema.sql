@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS `tutors`;
+CREATE DATABASE `tutors`;
