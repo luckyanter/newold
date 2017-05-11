@@ -1,70 +1,169 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tutor MATCH</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-		<meta charset="UTF-8">
-		<title>Tutor Match</title>
+  <!--CSS stylesheet Link-->
+  <link relative="stylesheet"   type="text/css" href="public/css/style.css">
 
-		<!-- Bootstrap CSS & JS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<!-- jQuery -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
 
-	</head>
-	<body>
-		
-		<div class="container">
+  <script src="https://code.jquery.com/jquery.js"></script>
 
-			<div class="jumbotron"style="background: yellow">
-				<h1>Tutor Match</h1>
-				<h3>materials materials materials!</h3>
-				<hr>
-				<a href="/" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Search materials</a>
-				<a href="/add" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Add New material</a>
-				<a href="/all" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All materials</a>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-			</div>
+<body>
+<!-- RESPONSIVE control section -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<!-- <a class="navbar-brand" href="#"><img src="logo.png"></a> -->
+</div>
 
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>Add material</strong></h3>
-						</div>
+<!--NAVBAR BUTTONS-->
+<div id="navbar" class="navbar-collapse collapse">
+<form class="navbar-form navbar-right">
+             <a class="btn btn-large btn-info" href="/">HOME</a>
+            <a class="btn btn-large btn-info" href="/all">TUTORS</a>
+</form>
+</div><!--/.navbar-collapse -->
+</div>
+</nav>
+<br>
+<br>
+<br>
+<br>
 
-						<div class="panel-body">
-							<form action="" method="POST" role="form">
-								<div class="form-group">
-									<label for="">Title</label>
-									<input type="text" class="form-control" id="title" placeholder="">
-								</div>
-								<div class="form-group">
-									<label for="">teacher</label>
-									<input type="text" class="form-control" id="teacher" placeholder="">
-								</div>
-								<div class="form-group">
-									<label for="">subject</label>
-									<input type="text" class="form-control" id="subject" placeholder="">
-								</div>
-								<div class="form-group">
-									<label for="">materials</label>
-									<input type="number" class="form-control" id="materials" placeholder="">
-								</div>
-							</form>
-							<br>
-							<div class="text-right">
-								<button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-material"></span> Add a material</button>
-							</div>
-						</div>
+<!--Subject DROP DOWN Button:  User chooses subject they need help with.-->
+<div class="container">
 
-					</div>
-				</div>			
-			</div>
+<h1> Please choose the subject we can help you with</h1>
 
-		</div>
+<!-- <ul class="dropdown-menu dropdown-menu-center"> -->
 
-	<!-- Custom Script -->
-	<script src="js/add.js" type="text/javascript"></script>
-	</body>
+<select id="mySelect">
+  <option value="">
+  <option value="HTML">HTML
+  <option value="CSS">CSS
+  <option value="Javascript">Javascript
+  <option value="Node.js">Node.js
+  <option value="Node.js">Sequelize
+</select>
+
+<!-- <p>When you select a new subject, a function is triggered which outputs the value of the selected subject.</p> -->
+
+<p id="subject"></p>
+<div id="apptlist">
+</div>
+
+</body>
+</html>
+    <!-- <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">Javascript</a></li>
+    <li><a href="#">Node.js</a></li> 
+    <li><a href="#">Express</a></li>
+    <li><a href="#">REACT</a></li>
+    <li><a href="#">MySQL</a></li>
+    <li><a href="#">Sequalize</a></li> -->
+  </ul>
+  </div><!-- Line 52/input-group-btn -->
+  </div><!-- line 50/input-group -->
+</div><!--Line 49 /.col-lg-6 -->
+</div><!-- Line 45/.container -->
+<br>
+<br>
+<br>
+<br>
+<!--TABLE of Available TUTORS.  This is where a list in the specific subject that the user chose will show-->
+<!-- <div class="container">    
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<div class="tutor-container">
+<h1>Choose your tutor and set your appointment.</h1>
+  <tbody>
+  <tr id="form-row">
+  <form id="tutor-form">
+    <td><button type="submit" class="btn btn-success">Search Tutors</button>
+    </td>
+  </form>
+  </tr>
+  </tbody> -->
+<!--Database will show a list of tutor availability to the viewer to choose from (radio buttons will be used to select).--> 
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Tutor Name</th>
+        <th>Time Available</th>
+       <th>Date Availabe</th>
+      </tr>
+    </thead>
+      <!-- <tbody> </tbody> -->
+  </table>
+  <div id="hey" > </div>
+</div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<!--Once the Viewer/Student chooses the tutor to study with a form will need to be filled out by Viewer/Student-->
+<div class="container">
+<div id="conversion_form">
+<div class="form-group row">
+  <label for="example-text-input" class="col-2 col-form-label">Name</label>
+  <div class="col-10">
+    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="example-email-input" class="col-2 col-form-label">Email</label>
+  <div class="col-10">
+    <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+  <div class="col-10">
+    <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+  </div>
+</div>
+<!--Viewer/Student must click submit-->
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<!--Here we need to show a confirmation description of the booking through MODAL javascript syntax.  I will make a temporary description to show however it should only show once the Student has clicked submit-->
+<h4> Thank you for choosing us to help you!<br>
+Your remote session is confirmed with Pualie on Monday at 7pm. <br> 
+See you then!</h4>
+</div> <!--/container-->
+
+<!--FOOTER-->
+<hr>
+<footer>
+  <p>100 Weldon Blvd, Sanford, FL 32773 | Tutor MATCH, Inc. | &copy; 2017</p>
+</footer>
+
+<!-- Custom Script -->
+<script src="js/add.js" type="text/javascript"></script>
+
+</body>
 </html>

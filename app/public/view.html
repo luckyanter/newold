@@ -1,92 +1,72 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google" content="notranslate">
+<meta http-equiv="Content-Language" content="en">
+<title>home page</title>
+<!-- Latest compiled and minified CSS & JS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" media="screen" title="no title">
 
-		<meta charset="UTF-8">
-		<title>Tutor Match</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
-		<!-- Bootstrap CSS & JS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<!-- jQuery -->
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
 
-	</head>
-	<body>
-		
-		<div class="container">
 
-			<div class="jumbotron" style="background: yellow">
-				<h1 style="text-align: center">Tutor Match</h1>
-				<h3></h3>
-				<hr>
-		<a href="/" class="btn btn-danger btn-lg" style="background: blue;"><span class="glyphicon glyphicon-eye-open"></span> Search materials</a>
-        <a href="/add" class="btn btn-danger btn-lg" style="background: blue;"><span class="glyphicon glyphicon-plus"></span> Add New material</a>
-        <a href="/all" class="btn btn-danger btn-lg" style="background: blue;"><span class="glyphicon glyphicon-th-list"></span> All materials</a>
+<body>
+<!-- Responsive control section -->
+<!-- RESPONSIVE control section -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<!-- <a class="navbar-brand" href="#"><img src="logo.png"></a> -->
+</div>
 
-			</div>
-			<div class="row">
+<!--NAVBAR BUTTONS-->
+<div id="navbar" class="navbar-collapse collapse">
+<form class="navbar-form navbar-right">
+    <a class="btn btn-large btn-info" href="/all">TUTORS</a>
+    <a class="btn btn-large btn-info" href="/add">APPT</a>
 
-				<div class="col-lg-12">
+</form>
+</div><!--/.navbar-collapse -->
+</div>
+</nav>
+ </div><!--/.navbar-collapse -->
+</div>
+</nav>
+<!-- Main jumbotron -->
+<div class="container">
+<div class="jumbotron"> <h1>Welcome to Tutor MATCH!</h1><img src="tutorHome.jpg">
+<br>
+<br>
 
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>material Search</strong></h3>
-						</div>
-						<div class="panel-body">
-							<input type="text" id="material-search" class="form-control" >
-							<br>
-							<div class="text-right">
-								<button class="btn btn-primary btn-md" id="search-btn"><span class="glyphicon glyphicon-search"></span> Search</button>
-							</div>
-						</div>
-					</div>
+<p>Since 2017, we have been providing voluntary quality tutoring for our community.  Helping adults in many technical areas such as HTML, CSS, Javascript, Node.js, express, REACT and many more skill sets.</p>
 
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>teacher Search</strong></h3>
-						</div>
-						<div class="panel-body">
-							<input type="text" id="teacher-search" class="form-control">
-							<br>
-							<div class="text-right">
-								<button class="btn btn-primary btn-md" id="teacher-search-btn"><span class="glyphicon glyphicon-search"></span> Search</button>
-							</div>
-						</div>
-					</div>
+</div>
+</div>
 
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>subject Search</strong></h3>
-						</div>
-						<div class="panel-body">
-							<input type="text" id="subject-search" class="form-control">
-							<br>
-							<div class="text-right">
-								<button class="btn btn-primary btn-md" id="subject-search-btn"><span class="glyphicon glyphicon-search"></span> Search</button>
-							</div>
-						</div>
-					</div>
 
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>material Search Results</strong></h3>
-						</div>
-						<div class="panel-body">
-							<div class="well" id="stats" hidden="true">
-								<h2 id="title"></h2>
-								<div>
-									<h3><strong>teacher:</strong> <span id="teacher"></span></h3>
-									<h3><strong>subject:</strong> <span id="subject"></span></h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>			
-			</div>
-		</div>
+<!-- footer below -->
+<div class="footer">
+<p>100 Weldon Blvd, Sanford, FL 32773 &copy; 2017 Tutor MATCH, Inc.</p>
 
-	<!-- Custom Script -->
-	<script src="js/view.js" type="text/javascript"></script>
-	</body>
+</div>
+</div> <!-- /container -->
+<script scr="https://code.jquery.com/jquery-3.2.1.min.js"</script>
+  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Custom Script -->
+<script src="js/view.js" type="text/javascript"></script>
+</body>
 </html>

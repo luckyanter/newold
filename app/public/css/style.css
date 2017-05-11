@@ -1,0 +1,143 @@
+.container {
+    max-width:auto
+    margin-top: 20px;
+
+}
+
+
+.course_container  {
+    margin: 0 auto;
+    width:60% /* value of your choice which suits your alignment */
+}
+  
+#mySelect {
+display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+}
+
+
+ul.nav.nav-pills {
+    text-align: right;
+}
+
+.nav-pills>li {
+    float: none;
+    display: inline-block;
+}
+
+
+H1 { 
+  text-align: center }
+  font-family: 'Oswald', sans-serif;
+
+
+
+.btn-default {
+    color: #333;
+    background-color: #000000;
+    border-color: #ccc;
+}
+
+
+.footer  {
+
+text-align: center;
+
+}
+
+
+.top-30 {
+  margin-top: 30px;
+}
+
+
+.navbar-brand> img {
+    display: block;
+    width: 65%;
+    margin-top: -27px;
+    height: auto;
+}
+
+.navbar-form {
+    border-color: #149c82;
+    margin-top: 17px;
+
+    }
+
+/* css from tutor.css */
+
+
+
+
+.navbar {
+    position: relative;
+    min-height: 80px;
+    margin-bottom: 30px;
+    background-color: #000000;
+    border: 1px solid transparent;
+
+}
+
+.navbar-inverse {
+    background-color: #000000;
+    border-color: transparent;
+
+.btn {
+  background-color: #4B0082;
+}
+
+button.submit {
+  float: right;
+}
+
+form#cms {
+  margin-top: 50px;
+}
+
+#cms textarea {
+  resize: none;
+}
+
+.panel-heading button.delete,
+button.edit {
+  float: right;
+  margin: 5px;
+}
+
+.tutor-container {
+  margin-top: 50px;
+ }
+
+.tutor-list {
+  margin-top: 25px;
+}
+
+.blog-container {
+  margin-top: 30px;
+}
+
+.blog {
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+#tutor-name {
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.top-30 {
+  margin-top: 30px;
+}
+
+p {
+    margin: 0 0 10.5px;
+    text-align: center;
+}
