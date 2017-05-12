@@ -16,17 +16,18 @@ function rendermaterials(data) {
 
     for (var i = 0; i < data.length; i++) {
 
-      var div = $("<div>");
+      var newTr = $("<tr>");
+      // newTr.append("<h2>" + data[i].title + "</h2>");
+      newTr.append("<td>" + data[i].teacher + "</td>");
+      newTr.append("<td>" + data[i].subject + "</td>");
+      newTr.append("<td>" + data[i].materials + "</td>");
+      // newTr.append("<button class='delete' data-id='" + data[i].id + "'>DELETE material</button>");
 
-      div.append("<h2>" + data[i].title + "</h2>");
-      div.append("<p>teacher: " + data[i].teacher + "</p>");
-      div.append("<p>subject: " + data[i].subject + "</p>");
-      div.append("<p>materials: " + data[i].materials + "</p>");
-      div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE material</button>");
-
-      $("#hey").append(div);
+      $("tbody").append(newTr);
 
     }
+
+
 
     // $(".delete").click(function() {
 
