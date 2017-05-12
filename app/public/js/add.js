@@ -30,7 +30,7 @@ function rendermaterials(data) {
       newTr.append("<td>" + data[i].subject + "</td>");
       // newTr.append("<button class='delete' data-id='" + data[i].id + "'>DELETE material</button>");
       newTr.append(newTd);
-      newTr.data("alldata", data);
+      newTr.data("data", data);
       $("tbody").append(newTr);
 
     }
@@ -39,15 +39,17 @@ $(document).on('click', '.complete', function(event){
   var id = $(this).data("id");
   // var fly = $("#711");
   // fly.empty();
-  // var why = $(this).parent().parent().data("alldata");
-  // console.log(why.id);
+  var why = $(this).parent().parent().data("data");
+  console.log(why[0].id);
+
 
 
   if($("#rat1").val().trim() && $("#rat2").val().trim() && $("#rat3").val().trim()){
   // alert('holabola');
   // var fly = $("#711");
 
-   fly.prepend("<h3>" + "your appointment is confirmed" + "</h3>")
+   fly.prepend("<h3>" + "your appointment is confirmed with " + why[0].tutor_name + 
+    " at " + why[0].time_avail + " on " + why[0].dates_avail + " at " + why[0].location + "</h3>")
   // Send an AJAX POST-request with jQuery
   // $.post("/api/new", newmaterial)
   //   .done(function(data) {
