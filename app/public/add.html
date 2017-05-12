@@ -56,8 +56,10 @@
   <option value="HTML">HTML
   <option value="CSS">CSS
   <option value="Javascript">Javascript
+  <option value="JQUERY">JQUERY
   <option value="Node.js">Node.js
-  <option value="Node.js">Sequelize
+  <option value="Sequelize">Sequelize
+  <option value="Express">Express
 </select>
 
 <!-- <p>When you select a new subject, a function is triggered which outputs the value of the selected subject.</p> -->
@@ -105,9 +107,8 @@
       <tr>
         <th>Tutor Name</th>
         <th>Time Available</th>
-       <th>Date Availabe</th>
-       <th>select a tutor</th>
-       <!-- <th> <form><input type="radio" name="gender" value="" checked> </form></th> -->
+       <th>Date Available</th>
+       <th>Subject</th>
       </tr>
     </thead>
       <tbody> </tbody>
@@ -123,29 +124,30 @@
 <br>
 <!--Once the Viewer/Student chooses the tutor to study with a form will need to be filled out by Viewer/Student-->
 <div class="container">
+<h2>please fill out the following form and then check which tutor you want</h2>
 <div id="conversion_form">
 <div class="form-group row">
   <label for="example-text-input" class="col-2 col-form-label">Name</label>
   <div class="col-10">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+    <input class="form-control" type="text" value="" id="rat1">
   </div>
 </div>
 
 <div class="form-group row">
   <label for="example-email-input" class="col-2 col-form-label">Email</label>
   <div class="col-10">
-    <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+    <input class="form-control" type="email" value="" id="rat2">
   </div>
 </div>
 
 <div class="form-group row">
   <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
   <div class="col-10">
-    <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+    <input class="form-control" type="tel" value="" id="rat3">
   </div>
 </div>
 <!--Viewer/Student must click submit-->
-<button type="submit" class="btn btn-primary">Submit</button>
+<!-- <button type="submit" class="btn btn-primary">Submit</button> -->
 </div>
 
 <br>
@@ -153,9 +155,7 @@
 <br>
 <br>
 <!--Here we need to show a confirmation description of the booking through MODAL javascript syntax.  I will make a temporary description to show however it should only show once the Student has clicked submit-->
-<h4> Thank you for choosing us to help you!<br>
-Your remote session is confirmed with Pualie on Monday at 7pm. <br> 
-See you then!</h4>
+<h4 id="711"> Thank you for choosing us to help you!<br></h4>
 </div> <!--/container-->
 
 <!--FOOTER-->

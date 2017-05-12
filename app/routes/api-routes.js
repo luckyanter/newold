@@ -1,37 +1,22 @@
 
-var Awesome = require("../models/material.js");
+var Tutor = require("../models/tutor.js");
 
 module.exports = function(app) {
 
   // Get all materials
   app.get("/api/all", function(req, res) {
 
-    Awesome.findAll({}).then(function(results) {
+    Tutor.findAll({}).then(function(results) {
       res.json(results);
     });
 
   });
 
-  // Get a specific material
-  app.get("/api/:material", function(req, res) {
-
-    if (req.params.material) {
-      Awesome.findAll({
-        where: {
-          title: req.params.material
-        }
-      }).then(function(results) {
-        res.json(results);
-      });
-    }
-
-  });
-
-  // Get all materials of a specific subject
-  app.get("/api/subject/:subject", function(req, res) {
+  // Get a specific material. THIS IS THE ONE THAT WORKS FOR THE DROPDOWN
+  app.get("/api/:subject", function(req, res) {
 
     if (req.params.subject) {
-      Awesome.findAll({
+      Tutor.findAll({
         where: {
           subject: req.params.subject
         }
@@ -42,13 +27,28 @@ module.exports = function(app) {
 
   });
 
+  // Get all materials of a specific subject
+  // app.get("/api/subject/:subject", function(req, res) {
+
+  //   if (req.params.subject) {
+  //     Tutor.findAll({
+  //       where: {
+  //         subject: req.params.subject
+  //       }
+  //     }).then(function(results) {
+  //       res.json(results);
+  //     });
+  //   }
+
+  // });
+
   // Get all materials from a specific teacher
   app.get("/api/teacher/:teacher", function(req, res) {
 
-    if (req.params.teacher) {
-      Awesome.findAll({
+    if (req.params.tutor_name) {
+      Tutor.findAll({
         where: {
-          teacher: req.params.teacher
+          tutor: req.params.tutor_name
         }
       }).then(function(results) {
         res.json(results);

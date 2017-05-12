@@ -1,8 +1,11 @@
+ var fly = $("#711");
+
 $("#mySelect").on("change", function() {
  var cat = $("#mySelect").val();
  if(cat){
     $.get("/api/" + cat, function(data){
     console.log(data);
+
     rendermaterials(data);
   });
   }
@@ -10,48 +13,55 @@ $("#mySelect").on("change", function() {
 
 function rendermaterials(data) {
   if (data.length !== 0) {
-
-    // $("#hey").empty();
-    // $("#hey").show();
-
+    $("tbody").empty();
+    fly.empty();
     for (var i = 0; i < data.length; i++) {
-
-    var check = $("<button>");
-    check.text("✓");
-    check.attr("data",data[i].id);
-    var newTd = $('<td>');
-    newTd.append(check);
-    
+      var check = $("<button>");
+      check.text("✓");
+      check.addClass("complete btn btn-default");
+      check.data("id",data[i].id);
+      var newTd = $('<td>');
+      newTd.append(check);
       var newTr = $("<tr>");
       // newTr.append("<h2>" + data[i].title + "</h2>");
-      newTr.append("<td>" + data[i].teacher + "</td>");
+      newTr.append("<td>" + data[i].tutor_name + "</td>");
+      newTr.append("<td>" + data[i].time_avail + "</td>");
+      newTr.append("<td>" + data[i].dates_avail + "</td>");
       newTr.append("<td>" + data[i].subject + "</td>");
-      newTr.append("<td>" + data[i].materials + "</td>");
-      // newTr.append("<td>" + check + "</td>");
+      // newTr.append("<button class='delete' data-id='" + data[i].id + "'>DELETE material</button>");
       newTr.append(newTd);
+      newTr.data("alldata", data);
       $("tbody").append(newTr);
 
     }
 
+$(document).on('click', '.complete', function(event){
+  var id = $(this).data("id");
+  // var fly = $("#711");
+  // fly.empty();
+  // var why = $(this).parent().parent().data("alldata");
+  // console.log(why.id);
 
 
-    // $(".delete").click(function() {
+  if($("#rat1").val().trim() && $("#rat2").val().trim() && $("#rat3").val().trim()){
+  // alert('holabola');
+  // var fly = $("#711");
 
-    //   var info = {
-    //     id: $(this).attr("data-id")
-    //   };
+   fly.prepend("<h3>" + "your appointment is confirmed" + "</h3>")
+  // Send an AJAX POST-request with jQuery
+  // $.post("/api/new", newmaterial)
+  //   .done(function(data) {
+  //     console.log(data);
+  //   });
 
-    //   $.post("/api/delete", info)
-    //     // On success, run the following code
-    //     .done(function(deldata) {
-    //       // Log the data we found
-    //       console.log(deldata);
-    //       console.log("Deleted Successfully!");
-    //     });
-    
-    //   $(this).closest("div").remove();
+  // Empty each input box by replacing the value with an empty string
+  $("#rat1").val("");
+  $("#rat2").val("");
+  $("#rat3").val("");
+  // $("#materials").val("");
+  }
+});
 
-    // });
 
   }
 }
@@ -76,28 +86,31 @@ function rendermaterials(data) {
 
 // });
 
-
 // $("#add-btn").on("click", function(event) {
-//   event.preventDefault();
+  // event.preventDefault();
+  
+  // Make a newmaterial object
+  // var newmaterial = {
+  //   title: $("#title").val().trim(),
+  //   teacher: $("#teacher").val().trim(),
+  //   subject: $("#subject").val().trim(),
+  //   materials: $("#materials").val().trim()
+  // };
 
-//   // Make a newmaterial object
-//   var newmaterial = {
-//     title: $("#title").val().trim(),
-//     teacher: $("#teacher").val().trim(),
-//     subject: $("#subject").val().trim(),
-//     materials: $("#materials").val().trim()
-//   };
+    // $(".delete").click(function() {
 
-//   // Send an AJAX POST-request with jQuery
-//   $.post("/api/new", newmaterial)
-//     .done(function(data) {
-//       console.log(data);
-//     });
+    //   var info = {
+    //     id: $(this).attr("data-id")
+    //   };
 
-//   // Empty each input box by replacing the value with an empty string
-//   $("#title").val("");
-//   $("#teacher").val("");
-//   $("#subject").val("");
-//   $("#materials").val("");
+    //   $.post("/api/delete", info)
+    //     // On success, run the following code
+    //     .done(function(deldata) {
+    //       // Log the data we found
+    //       console.log(deldata);
+    //       console.log("Deleted Successfully!");
+    //     });
+    
+    //   $(this).closest("div").remove();
 
-// });
+    // });

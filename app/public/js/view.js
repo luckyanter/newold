@@ -61,10 +61,10 @@ function rendermaterials(data) {
 
       var div = $("<div>");
 
-      div.append("<h2>" + data[i].title + "</h2>");
-      div.append("<p>teacher: " + data[i].teacher + "</p>");
+      div.append("<h2>" + data[i].id + "</h2>");
+      div.append("<p>teacher: " + data[i].tutor + "</p>");
       div.append("<p>subject: " + data[i].subject + "</p>");
-      div.append("<p>materials: " + data[i].materials + "</p>");
+      div.append("<p>materials: " + data[i].date_avail + "</p>");
       div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE material</button>");
 
       $("#stats").append(div);

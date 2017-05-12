@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS `tutors`;
-CREATE DATABASE `tutors`;
+DROP DATABASE IF EXISTS `tutormatch_db`;
+CREATE DATABASE `tutormatch_db`;
