@@ -16,13 +16,19 @@ function rendermaterials(data) {
 
     for (var i = 0; i < data.length; i++) {
 
+    var check = $("<button>");
+    check.text("✓");
+    check.attr("data",data[i].id);
+    var newTd = $('<td>');
+    newTd.append(check);
+    
       var newTr = $("<tr>");
       // newTr.append("<h2>" + data[i].title + "</h2>");
       newTr.append("<td>" + data[i].teacher + "</td>");
       newTr.append("<td>" + data[i].subject + "</td>");
       newTr.append("<td>" + data[i].materials + "</td>");
-      // newTr.append("<button class='delete' data-id='" + data[i].id + "'>DELETE material</button>");
-
+      // newTr.append("<td>" + check + "</td>");
+      newTr.append(newTd);
       $("tbody").append(newTr);
 
     }
